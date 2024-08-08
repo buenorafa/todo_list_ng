@@ -1,27 +1,44 @@
-# TodoListNg
+# CRUD Application in Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+This project is a simple Angular application developed as a course assignment for Web Programming 1 at IFPB. It demonstrates basic CRUD operations using Angular and Angular Material.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Create, Read, Update, Delete** functionality for a selected entity.
+- Use of Angular Material components like `mat-card`, `Button`, `mat-icon`, and others for a modern UI.
 
-## Code scaffolding
+## Entity
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The application works with a simple entity (e.g., Product) with at least three attributes. The chosen entity and its attributes are defined in a model class.
 
-## Build
+## Setup
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **Clone the repository:**
+   ```
+   git clone https://github.com/yourusername/crud_ng.git
+   ```
+2. **Navigate to the project directory:**
+   ```
+   cd crud_ng
+   ```
+3. **Install the dependencies:**
+   ```
+   npm install
+   ```
+4. **Run the application:**
+   ```
+   ng serve
+   ```
+   Navigate to `http://localhost:4200/` in your browser to view the app.
 
-## Running unit tests
+## Technologies Used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Angular
+- Angular Material
 
-## Running end-to-end tests
+## Usage
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **Insert:** Add new entities using the provided form.
+- **List:** View all entities in a list format.
+- **Edit:** Update existing entities.
+- **Remove:** Delete entities from the list.

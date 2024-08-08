@@ -1,4 +1,3 @@
-// Enum for task statuses
 export enum TaskStatus {
   Pending = 'Pending',
   InProgress = 'In Progress',

@@ -1,0 +1,40 @@
+<h1>Todo List</h1>
+<form class="task-input">
+  <div class="container">
+    <mat-form-field class="title-input">
+      <mat-label>Task</mat-label>
+      <input matInput id="title" />
+    </mat-form-field>
+    <mat-form-field class="status-select">
+      <mat-label>Status</mat-label>
+      <mat-select>
+        <mat-option
+          *ngFor="let status of TaskStatus | keyvalue"
+          [value]="status.value"
+        >
+          {{ status.value }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput id="description"></textarea>
+  </mat-form-field>
+  <div class="btn-container">
+    <button
+      mat-fab
+      color="primary"
+      aria-label="Example icon button with a delete icon"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</form>
+<section class="list">
+  <app-task />
+  <ul>
+    oi
+  </ul>
+</section>

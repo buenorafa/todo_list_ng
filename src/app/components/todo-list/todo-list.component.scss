@@ -1,0 +1,20 @@
+.task-input {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.container {
+  display: flex;
+  align-items: center; /* Alinha verticalmente os itens no centro */
+  gap: 0.5rem;
+}
+
+.title-input {
+  flex: 0 0 70%; /* O input ocupa 70% da largura do container */
+}
+
+.status-select {
+  flex: 1; /* O select ocupa o espaço restante */
+  margin-left: 16px; /* Espaço entre o input e o select, se necessário */
+}

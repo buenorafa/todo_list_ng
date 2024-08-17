@@ -14,12 +14,12 @@ export class Task {
   creationDate: Date;
   completionDate?: Date;
 
-  constructor(title: string, description: string, taskType: string) {
+  constructor(title: string, description: string, status: TaskStatus) {
     this.id = Task.nextId++;
     this.title = title;
     this.description = description;
-    this.taskType = taskType;
-    this.status = TaskStatus.Pending;
+    this.taskType = '';
+    this.status = status;
     this.creationDate = new Date();
   }
   startTask(): void {

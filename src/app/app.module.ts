@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TaskFormComponent } from './components/task-form/task-form.component';
 import { TaskComponent } from './components/task/task.component';
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -22,7 +22,7 @@ import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, TaskComponent, TodoListComponent],
+  declarations: [AppComponent, TaskComponent, TaskFormComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,6 +34,7 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatIconModule,
     MatSelectModule,
+    FormsModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Task } from '../models/task'; // Ajuste o caminho conforme necessário
+import { Task, TaskStatus } from '../models/task'; // Ajuste o caminho conforme necessário
 import { DATA } from '../shared/data'; // Ajuste o caminho conforme necessário
 
 @Injectable({
@@ -14,7 +14,7 @@ export class TaskService {
     return this.tasks;
   }
 
-  createTask(title: string, description: string, status: string): void {
+  createTask(title: string, description: string, status: TaskStatus): void {
     let task = new Task(title, description, status);
     this.tasks.push(task);
   }

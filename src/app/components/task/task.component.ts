@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TaskStatus } from '../../models/task';
+import { TaskService } from '../../services/task.service';
 
 @Component({
   selector: 'app-task',
@@ -7,5 +7,9 @@ import { TaskStatus } from '../../models/task';
   styleUrl: './task.component.scss',
 })
 export class TaskComponent {
-  TaskStatus = TaskStatus;
+  constructor(private taskService: TaskService) {}
+
+  // addTask(title: string, description: string, status: string): void {
+  //   this.taskService.createTask(title, description, status);
+  // }
 }

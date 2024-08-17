@@ -1,0 +1,38 @@
+<h1>Todo List</h1>
+<form class="task-input" (ngSubmit)="addTask()">
+  <div class="container">
+    <mat-form-field class="title-input">
+      <mat-label>Task</mat-label>
+      <input matInput [(ngModel)]="title" name="title" required />
+    </mat-form-field>
+    <mat-form-field class="status-select">
+      <mat-label>Status</mat-label>
+      <mat-select [(ngModel)]="status" name="status" required>
+        <mat-option [value]="TaskStatus.Pending">
+          {{ TaskStatus.Pending }}
+        </mat-option>
+        <mat-option [value]="TaskStatus.InProgress">
+          {{ TaskStatus.InProgress }}
+        </mat-option>
+        <mat-option [value]="TaskStatus.Completed">
+          {{ TaskStatus.Completed }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea
+      matInput
+      [(ngModel)]="description"
+      name="description"
+      required
+    ></textarea>
+  </mat-form-field>
+  <div class="btn-container">
+    <button mat-fab color="primary" aria-label="Add task" type="submit">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</form>

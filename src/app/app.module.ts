@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TaskFormComponent } from './components/task-form/task-form.component';
-import { TaskComponent } from './components/task/task.component';
+import { ListComponent } from './components/list/list.component';
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
@@ -20,9 +20,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { NgFor } from '@angular/common';
 
 import { FormsModule } from '@angular/forms';
+import { TaskComponent } from './components/task/task.component';
 
 @NgModule({
-  declarations: [AppComponent, TaskComponent, TaskFormComponent],
+  declarations: [AppComponent, ListComponent, TaskFormComponent, TaskComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

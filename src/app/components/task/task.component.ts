@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Task } from '../../models/task';
 import { TaskService } from '../../services/task.service';
 
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
-  styleUrl: './task.component.scss',
+  styleUrls: ['./task.component.scss'],
 })
 export class TaskComponent {
+  @Input() task!: Task;
+
   constructor(private taskService: TaskService) {}
 
-  // addTask(title: string, description: string, status: string): void {
-  //   this.taskService.createTask(title, description, status);
-  // }
+  deleteTask(): void {
+    this.taskService.deleteTask(this.task.id);
+  }
 }

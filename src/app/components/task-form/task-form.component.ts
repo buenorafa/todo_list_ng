@@ -22,6 +22,7 @@ export class TaskFormComponent implements OnInit {
   }
 
   addTask(): void {
+    // console.log(this.title, this.description, this.status);
     this.taskService.createTask(this.title, this.description, this.status);
     this.resetForm();
   }

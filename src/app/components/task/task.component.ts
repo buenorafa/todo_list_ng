@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Task } from '../../models/task';
 import { TaskService } from '../../services/task.service';
 
@@ -9,10 +9,12 @@ import { TaskService } from '../../services/task.service';
 })
 export class TaskComponent {
   @Input() task!: Task;
+  @Output() taskDeleted = new EventEmitter<void>();
 
   constructor(private taskService: TaskService) {}
 
   deleteTask(): void {
-    this.taskService.deleteTask(this.task.id);
+    this.taskService.deleteTask(this.task);
+    this.taskDeleted.emit();
   }
 }

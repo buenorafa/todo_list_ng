@@ -1,5 +1,9 @@
 <div class="task-container" *ngIf="tasks.length > 0; else noTasks">
-  <app-task *ngFor="let task of tasks" [task]="task"></app-task>
+  <app-task
+    *ngFor="let task of tasks"
+    [task]="task"
+    (taskDeleted)="onTaskDeleted()"
+  ></app-task>
 </div>
 <ng-template #noTasks>
   <p>No tasks available</p>

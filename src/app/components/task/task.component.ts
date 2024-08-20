@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Task } from '../../models/task';
+import { Task, TaskStatus } from '../../models/task';
+
 import { TaskService } from '../../services/task.service';
 
 @Component({
@@ -10,6 +11,8 @@ import { TaskService } from '../../services/task.service';
 export class TaskComponent {
   @Input() task!: Task;
   @Output() taskDeleted = new EventEmitter<void>();
+
+  status = TaskStatus;
 
   constructor(private taskService: TaskService) {}
 

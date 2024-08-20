@@ -4,8 +4,39 @@
       {{ task.title }}
     </mat-panel-title>
   </mat-expansion-panel-header>
-  <p>{{ task.description }}</p>
-  <button mat-fab color="warn" (click)="deleteTask()">
-    <mat-icon>delete</mat-icon>
-  </button>
+  <div class="container-form">
+    <form class="form">
+      <mat-form-field appearance="fill">
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="task.status" name="status" required>
+          <mat-option [value]="status.Pending">
+            {{ status.Pending }}
+          </mat-option>
+          <mat-option [value]="status.InProgress">
+            {{ status.InProgress }}
+          </mat-option>
+          <mat-option [value]="status.Completed">
+            {{ status.Completed }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea
+          matInput
+          [(ngModel)]="task.description"
+          name="description"
+          rows="4"
+        ></textarea>
+      </mat-form-field>
+
+      <div class="action-buttons">
+        <button mat-raised-button color="warn" (click)="deleteTask()">
+          <mat-icon>delete</mat-icon>
+          Delete
+        </button>
+      </div>
+    </form>
+  </div>
 </mat-expansion-panel>

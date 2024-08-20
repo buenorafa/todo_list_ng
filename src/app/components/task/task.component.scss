@@ -1,0 +1,42 @@
+.container-form {
+  border: 1px solid #444; /* Escurece a borda */
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Aumenta a profundidade da sombra */
+  background-color: #333; /* Cor de fundo escura */
+  color: #fff; /* Texto branco para contraste */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Adiciona espaçamento entre os campos */
+}
+
+mat-form-field {
+  width: 100%;
+  color: #fff; /* Texto dos campos branco */
+}
+
+#text-area-field {
+  resize: vertical; /* Permite redimensionar verticalmente */
+  color: #fff; /* Texto da área de texto branco */
+  background-color: #444; /* Cor de fundo da área de texto escura */
+  border: 1px solid #555; /* Borda da área de texto mais clara */
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center; /* Centraliza o botão */
+}
+
+button {
+  margin-top: 16px; /* Adiciona espaçamento acima do botão */
+  background-color: #555; /* Cor de fundo do botão */
+  color: #fff; /* Texto do botão branco */
+  border: none; /* Remove borda padrão */
+
+  &:hover {
+    background-color: #666; /* Cor de fundo ao passar o mouse */
+  }
+}
